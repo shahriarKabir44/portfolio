@@ -1,330 +1,299 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Md. Shahriar Kabir - Portfolio</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-  <style>
-    .socialsLogo {
-      width: 50px;
-      cursor: pointer;
-    }
-
-    .viewGithubLogo {
-      width: 20px;
-    }
-
-    .viewContainer {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    body {
-      font-family: serif;
-    }
-
-    .flex {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md. Shahriar Kabir - Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .navbar {
+            background-color: #343a40;
+        }
+        .navbar-brand, .nav-link {
+            color: #ffffff !important;
+        }
+        .hero {
+            background-color: #007bff;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        .section-title {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .card {
+            margin-bottom: 20px;
+        }
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+    </style>
 </head>
-
 <body>
-  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Md. Shahriar Kabir</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#about">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#projects">Projects</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contact">Contact</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
 
-  <header class="text-white text-center py-5" style="background: #61c674 !important">
-    <div class="container">
-      <h1 class="display-4">MERN Stack Developer & Competitive Programmer</h1>
-      <p class="lead">Showcasing my projects and skills</p>
-      <div class="socialsContainer">
-        <a href="https://www.linkedin.com/in/shahriar-kabir-2234941b3/">
-          <img class="socialsLogo" src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="" />
-        </a>
-        <a href="https://github.com/shahriarKabir44">
-          <img class="socialsLogo" src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="" />
-        </a>
-      </div>
-    </div>
-  </header>
-
-  <section id="about" class="py-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6">
-          <h2>About Me</h2>
-          <p>
-            👋 Hi there! I'm Md.Shahriar Kabir, a dynamic and driven developer
-            with a passion for crafting exceptional web and mobile
-            applications. I'm on a relentless journey to push the boundaries
-            of what's possible in the digital world.
-            <br />
-            <br />
-            💡 About Me:
-            <br />
-            🖥️ Experienced Node.js and React.js Developer: I've honed my
-            skills during my internship and beyond, gaining hands-on
-            experience in building responsive, scalable, and user-friendly web
-            applications. My technical toolkit includes cutting-edge
-            technologies and best practices to deliver top-notch solutions.
-            <br />
-            📱 Mobile App Enthusiast: I'm captivated by the world of mobile
-            app development, always eager to explore new frontiers in Android
-            using React native. Crafting seamless, feature-rich mobile
-            experiences is where I thrive.
-            <br />
-            🏆 Competitive Programming Enthusiast: Beyond my development work,
-            I'm an avid participant in competitive programming contests. I
-            thrive on solving complex algorithmic puzzles and continually
-            improving my problem-solving abilities.
-            <br />
-
-            🔍 What's Next: I'm constantly seeking new opportunities to grow
-            as a developer and expand my skill set. If you're interested in
-            building something amazing together, or if you'd like to chat
-            about competitive programming, feel free to connect with me! Let's
-            code, learn, and excel together.
-          </p>
-        </div>
-        <div class="col-lg-6">
-          <h2>Skills</h2>
-          <ul>
-            <li>MongoDB</li>
-            <li>React</li>
-            <li>Node.js</li>
-            <li>Express.js</li>
-            <li>Competitive Programming</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>MySQL</li>
-            <li>Python</li>
-            <li>C#</li>
-            <li>ASP.NET core</li>
-            <li>Angularjs</li>
-            <li>Git</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="bg-light py-5">
-    <div class="container">
-      <h2 class="text-center">Projects</h2>
-      <div class="row">
-        <!-- Add your project cards here -->
-        <div class="col-md-4 mb-4">
-          <div class="card">
-            <div class="card-body">
-              <div class="flex">
-                <h3 class="card-title"><i>KU_Oj</i></h3>
-
-                <a href="https://github.com/shahriarKabir44/ku_oj">
-                  <img class="viewGithubLogo" src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="" />
-                </a>
-              </div>
-
-              <p>A Competitive Programming Platform</p>
-
-              <p class="card-text">
-                Developed a platform like CodeForces where users can solve
-                competitive programming problems, host contests, chat during
-                contests. Users can submit their code in different languages
-                like Python, C++ and Java and the system runs those files and
-                sets the verdict.
-              </p>
-              <ul>
-                <li>
-                  Designed a method to run files of different programming
-                  languages using Node.js
-                </li>
-                <li>Used Redis for data caching.</li>
-                <li>
-                  Used a self developed migration tool for database
-                  migrations.
-                </li>
-              </ul>
-              <p>
-                Technologies: React, Express.js, MySQL, Redis, WebSocket,
-                Nodejs
-              </p>
-              <div class="viewContainer">
-                <a href="#" class="btn btn-link">View Project</a>
-              </div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Shahriar Kabir</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact Me!</a></li>
+                </ul>
             </div>
-          </div>
         </div>
-        <div class="col-md-4 mb-4">
-          <div class="card">
-            <div class="card-body">
-              <div class="flex">
-                <h3 class="card-title"><i>migratify</i></h3>
-                <a href="https://github.com/shahriarKabir44/migratify">
-                  <img class="viewGithubLogo" src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="" />
-                </a>
-              </div>
-              <p>A CLI Tool For Database Migrations</p>
-              <p class="card-text">
-                Developed a command-line interface (CLI) tool using Node.js
-                and MySQL for database migrations. It allows users to create
-                migration files, programmatically manage schema changes, and
-                version control database updates and Generate migration files
-                from an existing database. Used Graph Algorithms to create
-                migration files from an existing database
-              </p>
-              <ul>
-                <li>
-                  Designed a method to run files of different programming
-                  languages using Node.js
-                </li>
-                <li>Used Redis for data caching.</li>
-                <li>
-                  Used a self developed migration tool for database
-                  migrations.
-                </li>
-              </ul>
-              <p>Technologies: Node.js, MySQL</p>
-              <div class="viewContainer">
-                <a href="https://www.npmjs.com/package/migratify" class="btn btn-link">View Project</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-4">
-          <div class="card">
-            <div class="card-body">
-              <div class="flex">
-                <h3 class="card-title"><i>Find Home</i></h3>
-                <a href="https://github.com/shahriarKabir44/findHome">
-                  <img class="viewGithubLogo" src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="" />
-                </a>
-              </div>
-              <p>A property selling platform</p>
-              <p class="card-text">
-                Users can search and purchase properties. Admins can create
-                and approve companies or restrict them. Integrated machine
-                learning to predict whether a person is eligible for loan or
-                not
-              </p>
-              <ul>
-                <li>
-                  Designed separated dashboards for admins and companies.
-                </li>
-                <li>Used SVM Classifier</li>
-                <li>
-                  Created a separated python server to host the ML model.
-                </li>
-                <li>
-                  Used a self developed migration tool for database
-                  migrations.
-                </li>
-              </ul>
-              <p>
-                Technologies: Node.js, MySQL, Angularjs, Bootstrap, Python,
-                SKLearn
-              </p>
-              <div class="viewContainer"></div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-4">
-          <div class="card">
-            <div class="card-body">
-              <div class="flex">
-                <h3 class="card-title"><i>My Zone</i></h3>
-                <a href="https://github.com/shahriarKabir44/findHome">
-                  <img class="viewGithubLogo" src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="" />
-                </a>
-              </div>
-              <p>A Social Networking Platform</p>
-              <p class="card-text">
-                Developed a full-stack social networking platform. Users can
-                create and view posts, send messages, manage friend requests,
-                and discover others based on interests and common friends.
-              </p>
-              <ul>
-                <li>Implemented real-time messaging using WebSocket.</li>
-                <li>
-                  Developed a method to find friends of friends from a single
-                  SQL query.
-                </li>
-              </ul>
-              <p>
-                Technologies: Node.js, MySQL, Angularjs, Bootstrap, Python,
-                SKLearn
-              </p>
-              <div class="viewContainer"></div>
-            </div>
-          </div>
-        </div>
+    </nav>
 
-        <div class="col-md-4 mb-4">
-          <div class="card">
-            <div class="card-body">
-              <div class="flex">
-                <h3 class="card-title"><i>TripSafe</i></h3>
-                <a href="https://github.com/shahriarKabir44/TripSafe">
-                  <img class="viewGithubLogo" src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="" />
-                </a>
-              </div>
-              <p>A Bus Servce management system</p>
-              <p class="card-text">
-                A bus service management system that can be used to both
-                manage resources, employees, activities and book tickets.
-                Also, informs a user about the accident hazards while
-                purchasing tickets. Admins can manage resources and schedule,
-                view the number of people boarding and unboarding in every bus
-                stop. Issue an accident record.
-              </p>
-              <ul>
-                <li>
-                  Find available bus list to reach destination in a single SQL
-                  query.
-                </li>
-
-                <li>Learned repository pattern in ASP.NET</li>
-              </ul>
-              <p>Technologies: ASP.NET, AngularJs, Bootstrap, MySQL</p>
-              <div class="viewContainer"></div>
-            </div>
-          </div>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1 class="display-4">Md. Shahriar Kabir</h1>
+            <p class="lead">Software Developer | Competitive Programmer</p>
+            <a href="#contact" class="btn btn-light btn-lg">Get in Touch</a>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer Section -->
-  <footer class="bg-dark text-white text-center py-3">
-    <div class="container">&copy; 2023 Md. Shahriar Kabir</div>
-  </footer>
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <p>I am a Software Developer with a BSc in Computer Science and Engineering from Khulna University (CGPA: 3.60, Jan 2019 - Dec 2023). Passionate about building scalable applications and solving complex problems through code.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Bootstrap and JavaScript Scripts -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <!-- Add your custom JavaScript here if needed -->
+    <!-- Skills Section -->
+    <section id="skills" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Competitive Programming</h4>
+                    <ul>
+                        <li>CodeForces Handle: SHAO_KAHN</li>
+                        <li>CodeChef Handle: shahriarkabir</li>
+                        <li>Solved 2000+ Problems in Total</li>
+                        <li>CodeForces Max Rating: 1446</li>
+                        <li>CodeChef Max Rating: 1783</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h4>Technical Skills</h4>
+                    <p><strong>Experienced:</strong> NodeJs, ExpressJs, Python, C#, MySQL, Entity Framework, HTML/CSS/JavaScript/jQuery, WebSocket, ASP.NET, MS SQL Server, CPanel</p>
+                    <p><strong>Familiar:</strong> BASH, Docker, TypeScript, Redis</p>
+                    <h4>Tools/Applications</h4>
+                    <p>Visual Studio, Figma, Git, Excel, PostMan</p>
+                    <h4>Operating Systems</h4>
+                    <p>Windows, Linux</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Software Developer | Pipilika Soft</h5>
+                            <p class="card-subtitle mb-2 text-muted">Feb. 2024 – Present | Dhaka, Bangladesh</p>
+                            <ul>
+                                <li>Worked on developing ERP system features for universities such as HRM, Accounts, Academic, Exam etc.</li>
+                                <li>Worked on large data migrations.</li>
+                                <li>Migrated university accounting, academic data from PostgreSQL to Excel to MSSQL.</li>
+                                <li>Applied Excel formulas e.g. VLOOKUP, MATCH etc for data joining and performed data validations.</li>
+                                <li>Handled deployments on live server (Windows).</li>
+                                <li>Provided training to the stakeholders.</li>
+                                <li>Developed a task manager system for the office.</li>
+                                <li>Worked on payment gateway system integration e.g bKash (PGW + PayBill), Upay, SSLCOMMERZ etc.</li>
+                                <li>Developed a learning management system. Both website and admin panel.</li>
+                            </ul>
+                            <p>Technologies: ASP.NET, AngularJS, MS SQL Server, Entity Framework, EXCEL, GOOGLE SHEET</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Intern Software Engineer | Pipilika Soft</h5>
+                            <p class="card-subtitle mb-2 text-muted">March. 2021 – July. 2021 | Dhaka, Bangladesh</p>
+                            <ul>
+                                <li>Worked on Jahangirnagar University admission test registration automation system.</li>
+                                <li>Used Angular framework to develop responsive UI.</li>
+                                <li>Developed algorithms for applicant eligibility and seat planning.</li>
+                                <li>Implemented several client-side security measures.</li>
+                                <li>Performed load testing using Apache JMeter.</li>
+                                <li>Created a performance summary by analyzing the log data from MongoDB.</li>
+                            </ul>
+                            <p>Technologies: Angular, TypeScript, MongoDB</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">School Management System</h5>
+                            <p>A multi-tenant school management platform.</p>
+                            <ul>
+                                <li>Designed multi-tenant system architecture.</li>
+                                <li>Developed core features: Student Admission, Bill Generation, Result and Merit Generation, Student Promotion.</li>
+                                <li>Integrated payment gateway e.g. bKash, SSLCOMMERZ for online payment.</li>
+                                <li>Developed online admission website for schools.</li>
+                                <li>Developed plug and play feature for schools to register themselves on the ERP.</li>
+                            </ul>
+                            <p>Technologies: ASP.NET, MS SQL, AngularJS, PHP</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Amarschool</h5>
+                            <p>An online learning platform.</p>
+                            <ul>
+                                <li>Designed database schemas.</li>
+                                <li>Designed APIs allowing users to purchase, pay and view course materials.</li>
+                                <li>Created admin panel to manage courses, affiliators.</li>
+                                <li>Created online exam feature.</li>
+                                <li>Created APIs to upload course materials from admin panel and view from student panels.</li>
+                            </ul>
+                            <p>Technologies: ASP.NET, MS SQL, AngularJS, PHP</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Phire Dekha 25</h5>
+                            <p>A platform for applying for reunion for Pabna Edward College.</p>
+                            <ul>
+                                <li>Designed database schemas.</li>
+                                <li>Designed APIs allowing users to submit their application and upload images.</li>
+                                <li>Created admin panel to manage applicants.</li>
+                                <li>Performed data migrations using Google Sheets.</li>
+                            </ul>
+                            <p>Technologies: ASP.NET, MS SQL, AngularJS</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Migratify</h5>
+                            <p>A CLI tool for database migrations.</p>
+                            <ul>
+                                <li>Developed a command-line interface (CLI) tool using Node.js and MySQL for migrations.</li>
+                                <li>Allows users to create migration files, and programmatically manage schema changes.</li>
+                                <li>Roll back from the latest commit.</li>
+                                <li>Generate migration files from an existing database maintaining the dependencies of the tables using the topological sorting algorithm.</li>
+                                <li>Dump schema and/or data into an SQL file.</li>
+                            </ul>
+                            <p>Technologies: Node.js, MySQL</p>
+                            <p><a href="https://github.com/shahriarKabir44">GitHub</a> | <a href="#">NPMJS</a> | <a href="#">Walkthrough Video</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">KU_OJ</h5>
+                            <p>A competitive programming platform.</p>
+                            <ul>
+                                <li>Developed a platform like CodeForces where users can solve competitive programming problems, host contests, and chat during contests.</li>
+                                <li>Users can submit their code in different languages like Python, C++, and Java and the system runs those files and sets the verdict.</li>
+                                <li>Rejudges all submissions of a contest once the testcases of the problems of that contest are updated.</li>
+                                <li>Separate scoreboard for official and unofficial submissions.</li>
+                                <li>Implemented clustering to load balance the server into the different CPU cores to enhance performance.</li>
+                                <li>Developed a subscription system in React to enable the parent components to trigger the child components.</li>
+                                <li>Implemented cache-first strategy using Redis to optimize performance.</li>
+                                <li>Configured Docker CI using GitHub Actions.</li>
+                            </ul>
+                            <p>Technologies: Node.js, MySQL, ReactJs, Redis, WebSocket, ExpressJs</p>
+                            <p><a href="https://github.com/shahriarKabir44">GitHub</a> | <a href="#">Live Link</a> | <a href="#">Walkthrough Video</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Oregano</h5>
+                            <p>A social food delivery platform.</p>
+                            <ul>
+                                <li>Users can buy and sell food items.</li>
+                                <li>Users can post about their produced food items.</li>
+                                <li>Anyone can be a buyer, a seller, or a rider.</li>
+                                <li>Implemented Facebook authentication and OTP verification.</li>
+                                <li>Implemented push notifications.</li>
+                                <li>Added Google Maps to see where to pick the order from and where to deliver.</li>
+                                <li>Admins can assign a rider to pick up a delivery from the web dashboard.</li>
+                                <li>Admin dashboard gets updated in real-time whenever an order is placed.</li>
+                                <li>Added location searching for custom drop location.</li>
+                            </ul>
+                            <p>Technologies: Node.js, MongoDB, React Native (Expo), ServiceWorker API, ExpressJs, GraphQL, AngularJS, Twilio, BootStrap, GeoApiFy</p>
+                            <p><a href="https://github.com/shahriarKabir44">GitHub</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <p>Email: shourovk6@gmail.com</p>
+                    <p>Phone: +8801871780163</p>
+                    <p>GitHub: <a href="https://github.com/shahriarKabir44">shahriarKabir44</a></p>
+                    <p>GitLab: <a href="https://gitlab.com/shahriarKabir44">shahriarKabir44</a></p>
+                    <p>LinkedIn: <a href="https://www.linkedin.com/in/shahriar-kabir-2234941b3">shahriar-kabir-2234941b3</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Md. Shahriar Kabir. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
