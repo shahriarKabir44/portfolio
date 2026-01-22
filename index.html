@@ -3,297 +3,369 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Md. Shahriar Kabir - Portfolio</title>
-    <!-- Bootstrap CSS -->
+    <title>Md. Shahriar Kabir | Software Developer & Data Specialist</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f8f9fa;
+        :root {
+            --bg-dark: #0f172a;
+            --card-bg: #1e293b;
+            --accent: #38bdf8;
+            --text-main: #e2e8f0;
+            --text-muted: #94a3b8;
+            --excel-green: #107c41;
         }
-        .navbar {
-            background-color: #343a40;
+
+        body { 
+            background-color: var(--bg-dark); 
+            color: var(--text-main); 
+            font-family: 'Inter', sans-serif; 
+            scroll-behavior: smooth; 
         }
-        .navbar-brand, .nav-link {
-            color: #ffffff !important;
+
+        .accent-color { color: var(--accent); }
+        .navbar { background-color: rgba(15, 23, 42, 0.95); border-bottom: 1px solid #334155; }
+        
+        /* Cards & Sections */
+        .card { background-color: var(--card-bg); border: 1px solid #334155; color: var(--text-main); transition: 0.3s; }
+        .card:hover { transform: translateY(-5px); border-color: var(--accent); }
+        section { padding: 80px 0; }
+
+        /* Experience Timeline */
+        .experience-item { border-left: 2px solid var(--accent); padding-left: 25px; margin-bottom: 40px; position: relative; }
+        .experience-item::before { content: ""; position: absolute; width: 14px; height: 14px; background: var(--accent); left: -8px; top: 5px; border-radius: 50%; box-shadow: 0 0 10px var(--accent); }
+
+        /* Excel Expertise Box */
+        .excel-pro-box { 
+            background: linear-gradient(135deg, #107c41 0%, #064e3b 100%); 
+            border-radius: 12px; 
+            padding: 30px; 
+            border: 1px solid #22c55e;
         }
-        .hero {
-            background-color: #007bff;
-            color: white;
-            padding: 100px 0;
+.skill-group h5 { border-bottom: 2px solid var(--accent); display: inline-block; padding-bottom: 5px; margin-bottom: 15px; }
+        .badge-skill { background: rgba(56, 189, 248, 0.1); color: var(--accent); border: 1px solid var(--accent); padding: 6px 14px; border-radius: 50px; display: inline-block; margin: 4px; font-size: 0.85rem; font-weight: 500; }
+        .badge-tech { 
+            background-color: rgba(56, 189, 248, 0.1); 
+            color: var(--accent); 
+            border: 1px solid var(--accent); 
+            padding: 4px 10px; 
+            border-radius: 6px; 
+            font-size: 0.8rem; 
+            margin-right: 5px;
+            margin-bottom: 5px;
+            display: inline-block;
+        }
+.btn-github { background-color: #333; color: white; border: none; }
+        .btn-github:hover { background-color: #444; color: white; }
+        .article-card { border-top: 4px solid var(--accent); }
+        .view-more-box {
+            background: linear-gradient(90deg, rgba(0, 163, 224, 0.1) 0%, rgba(3, 10, 28, 1) 100%);
+            border: 1px dashed var(--accent);
+            color: white !important ;
+            border-radius: 15px;
+            padding: 40px;
             text-align: center;
         }
-        .section-title {
-            margin-bottom: 40px;
-            text-align: center;
-        }
-        .card {
-            margin-bottom: 20px;
-        }
-        footer {
-            background-color: #343a40;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
+        footer { background-color: #020617; padding: 50px 0; border-top: 1px solid #1e293b; }
     </style>
 </head>
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="#">Shahriar Kabir</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand fw-bold" href="#">SHAHRIAR<span class="accent-color">.KABIR</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
                     <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
                     <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact Me!</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#articles">Articles</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <h1 class="display-4">Md. Shahriar Kabir</h1>
-            <p class="lead">Software Developer | Competitive Programmer</p>
-            <a href="#contact" class="btn btn-light btn-lg">Get in Touch</a>
+    <header class="container text-center py-5 mt-5">
+    
+        <h1 class="display-3 fw-bold">Md. Shahriar Kabir</h1>
+        <p class="lead accent-color fw-semibold">Software Developer | Data Specialist | Competitive Programmer</p>
+        <p class="mx-auto text-muted" style="max-width: 700px;">
+            CSE Graduate from Khulna University. Expert in building ERP systems, performance-tuned platforms, 
+            and managing complex data migrations with high precision.
+        </p>
+        <div class="mt-4">
+            <a href="mailto:shourovk6@gmail.com" class="btn btn-outline-primary btn-lg px-4 ">Hire Me</a>
+                            <a href="https://linkedin.com/in/shahriar-kabir-223494163" class="btn btn-outline-primary btn-lg px-4  "><i class="fab fa-linkedin"></i>LinkedIn</a>
+
+            <a href="https://github.com/shahriarKabir44" class="btn btn-outline-primary btn-lg px-4"><i class="fab fa-github  "></i>GitHub</a>
+            <a href="https://www.youtube.com/@mdshahriarkabir1906" target="_blank" class="btn btn-outline-primary btn-lg px-4  "><i class="fab fa-youtube"></i>YouTube</a>
+        </div>
+    </header>
+<section id="skills" class="container">
+        <h2 class="fw-bold mb-5 text-center">Technical Expertise</h2>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4 skill-group">
+                <h5><i class="fas fa-code me-2"></i>Backend & Frameworks</h5>
+                <div>
+                    <span class="badge-skill">Node.js</span><span class="badge-skill">Express.js</span>
+                    <span class="badge-skill">ASP.NET</span><span class="badge-skill">C#</span>
+                    <span class="badge-skill">Python</span><span class="badge-skill">Entity Framework</span>
+                    <span class="badge-skill">WebSocket</span><span class="badge-skill">GraphQL</span>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 skill-group">
+                <h5><i class="fas fa-server me-2"></i>DB & DevOps</h5>
+                <div>
+                    <span class="badge-skill">MS SQL Server</span><span class="badge-skill">MySQL</span>
+                    <span class="badge-skill">PostgreSQL</span><span class="badge-skill">MongoDB</span>
+                    <span class="badge-skill">Redis</span><span class="badge-skill">Docker</span>
+                    <span class="badge-skill">CPanel</span><span class="badge-skill">Git</span>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 skill-group">
+                <h5 style="border-color: #107c41;"><i class="fas fa-file-excel me-2"></i>Data Specialist</h5>
+                <div>
+                    <span class="badge-skill">Pivot Charts</span><span class="badge-skill">Data Visualization</span>
+                    <span class="badge-skill">INDEX/MATCH</span><span class="badge-skill">XLOOKUP</span>
+                    <span class="badge-skill">Google Script</span><span class="badge-skill">Data Migration</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="cp-box d-flex flex-wrap justify-content-around align-items-center text-center">
+                    <div>
+                        <h6 class=" ">Codeforces (Shao Kahn)</h6>
+                        <h4 class="fw-bold accent-color">Max Rating: 1446</h4>
+                    </div>
+                    <div class="vr d-none d-md-block"></div>
+                    <div>
+                        <h3 class="fw-bold mb-0">2000+ Problems Solved</h3>
+                        <p class="small   mb-0">Total across all platforms</p>
+                    </div>
+                    <div class="vr d-none d-md-block"></div>
+                    <div>
+                        <h6 class=" ">CodeChef (shahriarkabir)</h6>
+                        <h4 class="fw-bold accent-color">Max Rating: 1783</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="experience" class="container">
+        <h2 class="fw-bold mb-5 text-center">Work Experience</h2>
+        
+        <div class="experience-item">
+            <div class="d-flex justify-content-between align-items-start flex-wrap">
+                <h4 class="fw-bold">Software Developer @ Pipilika Soft</h4>
+                <span class="text-accent fw-bold">Feb. 2024 - Present</span>
+            </div>
+            <p class="text-muted">Dhaka, Bangladesh</p>
+            <ul>
+                <li>Architecting core ERP modules: HRM, Accounts, Academic, and Exam systems.</li>
+                <li>Executing complex data migrations from PostgreSQL to MS SQL using automated workflows.</li>
+                <li>Integrating major payment gateways: bKash (PGW + PayBill), Upay, and SSLCOMMERZ.</li>
+                <li>Developing full-stack Learning Management Systems (LMS) with comprehensive admin controls.</li>
+                <li>Managing live server environments and stakeholder training.</li>
+            </ul>
+            <div class="mt-3">
+                <span class="badge-tech">ASP.NET</span><span class="badge-tech">AngularJS</span><span class="badge-tech">MS SQL</span><span class="badge-tech">Entity Framework</span>
+            </div>
+        </div>
+
+        <div class="experience-item">
+            <div class="d-flex justify-content-between align-items-start flex-wrap">
+                <h4 class="fw-bold">Intern Software Engineer @ Pipilika Soft</h4>
+                <span class="text-accent fw-bold">March 2021 - July 2021</span>
+            </div>
+            <p class="text-muted">Dhaka, Bangladesh</p>
+            <ul>
+                <li>Automated registration and seat planning for Jahangirnagar University admissions.</li>
+                <li>Built high-performance, responsive UIs with Angular and TypeScript.</li>
+                <li>Performed load testing with Apache JMeter and analyzed MongoDB logs for bottleneck identification.</li>
+            </ul>
+            <div class="mt-3">
+                <span class="badge-tech">Angular</span><span class="badge-tech">TypeScript</span><span class="badge-tech">MongoDB</span><span class="badge-tech">JMeter</span>
+            </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-5">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="row">
-                <div class="col-md-8 offset-md-2">
-                    <p>I am a Software Developer with a BSc in Computer Science and Engineering from Khulna University (CGPA: 3.60, Jan 2019 - Dec 2023). Passionate about building scalable applications and solving complex problems through code.</p>
+    <section class="container">
+        <div class="excel-pro-box shadow-lg">
+            <div class="row align-items-center">
+                <div class="col-md-9">
+                    <h3 class="fw-bold mb-3"><i class="fas fa-file-excel me-2"></i> Advanced Data Mastery</h3>
+                    <p class="mb-3">I don't just use Excel; I use it as a powerful data engine for large-scale university migrations. My expertise includes:</p>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check-circle me-2 text-warning"></i> <strong>Visualizations:</strong> Dynamic Pivot Charts & Dashboards</li>
+                                <li><i class="fas fa-check-circle me-2 text-warning"></i> <strong>Complex Logic:</strong> INDEX, MATCH, FILTER, XLOOKUP</li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-6">
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check-circle me-2 text-warning"></i> <strong>Data Cleaning:</strong> COUNTIF, Data Validation, Power Query</li>
+                                <li><i class="fas fa-check-circle me-2 text-warning"></i> <strong>Automation:</strong> Google Script & Macro flows</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center d-none d-md-block">
+                    <i class="fas fa-database fa-5x opacity-25"></i>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="section-title">Skills</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <h4>Competitive Programming</h4>
-                    <ul>
-                        <li>CodeForces Handle: SHAO_KAHN</li>
-                        <li>CodeChef Handle: shahriarkabir</li>
-                        <li>Solved 2000+ Problems in Total</li>
-                        <li>CodeForces Max Rating: 1446</li>
-                        <li>CodeChef Max Rating: 1783</li>
+    <section id="projects" class="container">
+        <h2 class="fw-bold mb-5 text-center">Top Engineering Projects</h2>
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <div class="card p-4 h-100">
+                    <h4 class="fw-bold accent-color">KU_OJ | Online Judge Platform</h4>
+                    <p class="text-muted">A full-scale competitive programming platform like Codeforces.</p>
+                    <ul class="small">
+                        <li>Supports Python, C++, and Java with a custom judge engine.</li>
+                        <li>Real-time chat during contests and automated rejudging systems.</li>
+                        <li>Clustering used for load balancing; Redis used for cache-first performance.</li>
                     </ul>
+                    <div class="mt-auto">
+                        <span class="badge-tech">Node.js</span><span class="badge-tech">Redis</span><span class="badge-tech">Docker CI</span><span class="badge-tech">WebSocket</span>
+                        <span class="badge-tech">ReactJS</span>
+                        
+                            <a href="https://github.com/shahriarKabir44/ku_oj" target="_blank" class="btn btn-github btn-sm"><i class="fab fa-github me-1"></i>View Source</a>
+                        
+                    </div>
                 </div>
-                <div class="col-md-6">
-                    <h4>Technical Skills</h4>
-                    <p><strong>Experienced:</strong> NodeJs, ExpressJs, Python, C#, MySQL, Entity Framework, HTML/CSS/JavaScript/jQuery, WebSocket, ASP.NET, MS SQL Server, CPanel</p>
-                    <p><strong>Familiar:</strong> BASH, Docker, TypeScript, Redis</p>
-                    <h4>Tools/Applications</h4>
-                    <p>Visual Studio, Figma, Git, Excel, PostMan</p>
-                    <h4>Operating Systems</h4>
-                    <p>Windows, Linux</p>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="card p-4 h-100">
+                    <h4 class="fw-bold accent-color">Migratify | CLI Migration Tool</h4>
+                    <p class="text-muted">A tool to manage database schema changes programmatically.</p>
+                    <ul class="small">
+                        <li>Uses <strong>Topological Sorting</strong> to handle table dependencies during generation.</li>
+                        <li>Features rollback capabilities and schema/data dumping to SQL files.</li>
+                        <li>Published on NPM for developer use.</li>
+                    </ul>
+                    <div class="mt-auto">
+                        <span class="badge-tech">Node.js</span><span class="badge-tech">MySQL</span><span class="badge-tech">Algorithms</span>
+                                                    <a href="https://github.com/shahriarKabir44/migratify" target="_blank" class="btn btn-github btn-sm"><i class="fab fa-github me-1"></i>View Source</a>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="card p-4 h-100">
+                    <h4 class="fw-bold accent-color">Oregano | Food Delivery Platform</h4>
+                    <p class="text-muted">Social platform for buying, selling, and riding for food delivery.</p>
+                    <ul class="small">
+                        <li>Integrated Google Maps for custom drop locations and real-time tracking.</li>
+                        <li>Real-time push notifications and Facebook/OTP authentication.</li>
+                        <li>Web dashboard for admins to assign riders in real-time.</li>
+                    </ul>
+                    <div class="mt-auto">
+                        <span class="badge-tech">React Native</span><span class="badge-tech">GraphQL</span><span class="badge-tech">Expo</span>
+                        <span class="badge-tech">MongoDB</span> <span class="badge-tech">AngularJS</span>
+                         <a href="https://github.com/shahriarKabir44/oregano" target="_blank" class="btn btn-github btn-sm"><i class="fab fa-github me-1"></i>View Source</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card p-4">
+                    <h4 class="fw-bold text-info">AmarSchool</h4>
+                     <ul class=" small">
+                        <li>Designed database schemas for student-teacher interactions.</li>
+                        <li>Created Admin Panel to manage courses and affiliates.</li>
+                        <li>Online exam feature allowing real-time participation.</li>
+                    </ul>
+                    <div class="mt-auto pt-3">
+                        <span class="badge-skill">ASP.NET</span><span class="badge-skill">PHP</span><span class="badge-skill">MS SQL</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card p-4">
+                    <h4 class="fw-bold text-info">Phire Dekha 25</h4>
+                     <ul class="  small">
+                        <li>Designed APIs for secure application submission and image uploads.</li>
+                        <li>Managed large-scale applicant data via Google Sheets integration.</li>
+                    </ul>
+                    <div class="mt-auto pt-3">
+                        <span class="badge-skill">ASP.NET</span><span class="badge-skill">MS SQL</span><span class="badge-skill">Google Sheets</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="card p-4 h-100">
+                    <h4 class="fw-bold accent-color">Multi-Tenant School ERP</h4>
+                     <ul class="small">
+                        <li>Core features: Student Admission, Bill Generation, and Merit Rankings.</li>
+                        <li>Multi-tenant architecture allowing schools to register and go live instantly.</li>
+                        <li>Integrated bKash and SSLCOMMERZ for automated student fee payments.</li>
+                    </ul>
+                    <div class="mt-auto">
+                        <span class="badge-tech">ASP.NET</span><span class="badge-tech">MS SQL</span><span class="badge-tech">AngularJS</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="container mt-5">
+                    <div class="view-more-box">
+                        <h3 class="fw-bold mb-3">View more exciting projects on my github profile!</h3>
+                        <a href="https://github.com/shahriarKabir44" style="color: white !important;" target="_blank" class="btn btn-accent btn-lg px-5">
+                            <i class="fab fa-github me-2"></i>Go to GitHub
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="py-5">
+    <section id="articles" class="bg-dark py-5">
         <div class="container">
-            <h2 class="section-title">Experience</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Software Developer | Pipilika Soft</h5>
-                            <p class="card-subtitle mb-2 text-muted">Feb. 2024 – Present | Dhaka, Bangladesh</p>
-                            <ul>
-                                <li>Worked on developing ERP system features for universities such as HRM, Accounts, Academic, Exam etc.</li>
-                                <li>Worked on large data migrations.</li>
-                                <li>Migrated university accounting, academic data from PostgreSQL to Excel to MSSQL.</li>
-                                <li>Applied Excel formulas e.g. VLOOKUP, MATCH etc for data joining and performed data validations.</li>
-                                <li>Handled deployments on live server (Windows).</li>
-                                <li>Provided training to the stakeholders.</li>
-                                <li>Developed a task manager system for the office.</li>
-                                <li>Worked on payment gateway system integration e.g bKash (PGW + PayBill), Upay, SSLCOMMERZ etc.</li>
-                                <li>Developed a learning management system. Both website and admin panel.</li>
-                            </ul>
-                            <p>Technologies: ASP.NET, AngularJS, MS SQL Server, Entity Framework, EXCEL, GOOGLE SHEET</p>
-                        </div>
+            <h2 class="fw-bold mb-5 text-center">Technical Writing</h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-5">
+                    <div class="card p-4 article-card h-100">
+                        <h5 class="fw-bold">Send Push Notifications Using Vanilla JS!</h5>
+                        <p class="text-muted small">An in-depth guide on using the ServiceWorker API with ExpressJS to implement web push notifications.</p>
+                        <a href="https://dev.to/shahriarkabir44/send-push-notifications-using-vanila-js-example-with-expressjs-36jp" class="accent-color text-decoration-none fw-bold mt-auto">Read on DEV.to <i class="fas fa-arrow-right ms-1"></i></a>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Intern Software Engineer | Pipilika Soft</h5>
-                            <p class="card-subtitle mb-2 text-muted">March. 2021 – July. 2021 | Dhaka, Bangladesh</p>
-                            <ul>
-                                <li>Worked on Jahangirnagar University admission test registration automation system.</li>
-                                <li>Used Angular framework to develop responsive UI.</li>
-                                <li>Developed algorithms for applicant eligibility and seat planning.</li>
-                                <li>Implemented several client-side security measures.</li>
-                                <li>Performed load testing using Apache JMeter.</li>
-                                <li>Created a performance summary by analyzing the log data from MongoDB.</li>
-                            </ul>
-                            <p>Technologies: Angular, TypeScript, MongoDB</p>
-                        </div>
+                <div class="col-md-5">
+                    <div class="card p-4 article-card h-100">
+                        <h5 class="fw-bold">Browser Dev Tools for Mobile!</h5>
+                        <p class="text-muted small">Tutorial on configuring Chrome Dev Tools to debug and inspect web app behavior on mobile devices.</p>
+                        <a href="https://dev.to/shahriarkabir44/browser-dev-tools-for-mobile-3nc8" class="accent-color text-decoration-none fw-bold mt-auto">Read on DEV.to <i class="fas fa-arrow-right ms-1"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="section-title">Projects</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">School Management System</h5>
-                            <p>A multi-tenant school management platform.</p>
-                            <ul>
-                                <li>Designed multi-tenant system architecture.</li>
-                                <li>Developed core features: Student Admission, Bill Generation, Result and Merit Generation, Student Promotion.</li>
-                                <li>Integrated payment gateway e.g. bKash, SSLCOMMERZ for online payment.</li>
-                                <li>Developed online admission website for schools.</li>
-                                <li>Developed plug and play feature for schools to register themselves on the ERP.</li>
-                            </ul>
-                            <p>Technologies: ASP.NET, MS SQL, AngularJS, PHP</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Amarschool</h5>
-                            <p>An online learning platform.</p>
-                            <ul>
-                                <li>Designed database schemas.</li>
-                                <li>Designed APIs allowing users to purchase, pay and view course materials.</li>
-                                <li>Created admin panel to manage courses, affiliators.</li>
-                                <li>Created online exam feature.</li>
-                                <li>Created APIs to upload course materials from admin panel and view from student panels.</li>
-                            </ul>
-                            <p>Technologies: ASP.NET, MS SQL, AngularJS, PHP</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Phire Dekha 25</h5>
-                            <p>A platform for applying for reunion for Pabna Edward College.</p>
-                            <ul>
-                                <li>Designed database schemas.</li>
-                                <li>Designed APIs allowing users to submit their application and upload images.</li>
-                                <li>Created admin panel to manage applicants.</li>
-                                <li>Performed data migrations using Google Sheets.</li>
-                            </ul>
-                            <p>Technologies: ASP.NET, MS SQL, AngularJS</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Migratify</h5>
-                            <p>A CLI tool for database migrations.</p>
-                            <ul>
-                                <li>Developed a command-line interface (CLI) tool using Node.js and MySQL for migrations.</li>
-                                <li>Allows users to create migration files, and programmatically manage schema changes.</li>
-                                <li>Roll back from the latest commit.</li>
-                                <li>Generate migration files from an existing database maintaining the dependencies of the tables using the topological sorting algorithm.</li>
-                                <li>Dump schema and/or data into an SQL file.</li>
-                            </ul>
-                            <p>Technologies: Node.js, MySQL</p>
-                            <p><a href="https://github.com/shahriarKabir44/migratify">GitHub</a> | <a href="https://www.npmjs.com/package/migratify">NPMJS</a> | <a href="https://www.youtube.com/watch?v=Q5XaW7LeZno">Walkthrough Video</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">KU_OJ</h5>
-                            <p>A competitive programming platform.</p>
-                            <ul>
-                                <li>Developed a platform like CodeForces where users can solve competitive programming problems, host contests, and chat during contests.</li>
-                                <li>Users can submit their code in different languages like Python, C++, and Java and the system runs those files and sets the verdict.</li>
-                                <li>Rejudges all submissions of a contest once the testcases of the problems of that contest are updated.</li>
-                                <li>Separate scoreboard for official and unofficial submissions.</li>
-                                <li>Implemented clustering to load balance the server into the different CPU cores to enhance performance.</li>
-                                <li>Developed a subscription system in React to enable the parent components to trigger the child components.</li>
-                                <li>Implemented cache-first strategy using Redis to optimize performance.</li>
-                                <li>Configured Docker CI using GitHub Actions.</li>
-                            </ul>
-                            <p>Technologies: Node.js, MySQL, ReactJs, Redis, WebSocket, ExpressJs</p>
-                            <p><a href="https://github.com/shahriarKabir44/ku_oj">GitHub</a> | <a href="https://ku-oj.vercel.app/">Live Link</a> | <a href="https://www.youtube.com/watch?v=29oM96NiW58">Walkthrough Video</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Oregano</h5>
-                            <p>A social food delivery platform.</p>
-                            <ul>
-                                <li>Users can buy and sell food items.</li>
-                                <li>Users can post about their produced food items.</li>
-                                <li>Anyone can be a buyer, a seller, or a rider.</li>
-                                <li>Implemented Facebook authentication and OTP verification.</li>
-                                <li>Implemented push notifications.</li>
-                                <li>Added Google Maps to see where to pick the order from and where to deliver.</li>
-                                <li>Admins can assign a rider to pick up a delivery from the web dashboard.</li>
-                                <li>Admin dashboard gets updated in real-time whenever an order is placed.</li>
-                                <li>Added location searching for custom drop location.</li>
-                            </ul>
-                            <p>Technologies: Node.js, MongoDB, React Native (Expo), ServiceWorker API, ExpressJs, GraphQL, AngularJS, Twilio, BootStrap, GeoApiFy</p>
-                            <p><a href="https://github.com/shahriarKabir44/oregano">GitHub</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-5">
-        <div class="container">
-            <h2 class="section-title">Contact</h2>
-            <div class="row">
-                <div class="col-md-6 offset-md-3">
-                    <p>Email: shourovk6@gmail.com</p>
-                    <p>Phone: +8801871780163</p>
-                    <p>GitHub: <a href="https://github.com/shahriarKabir44">shahriarKabir44</a></p>
-                    <p>GitLab: <a href="https://gitlab.com/shahriarKabir44">shahriarKabir44</a></p>
-                    <p>LinkedIn: <a href="https://www.linkedin.com/in/shahriar-kabir-2234941b3">shahriar-kabir-2234941b3</a></p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
     <footer>
-        <div class="container">
-            <p>&copy; 2025 Md. Shahriar Kabir. All rights reserved.</p>
+        <div class="container text-center">
+            <h2 class="fw-bold mb-4">Let's Build Something Great</h2>
+            <p class="text-muted">Available for software development roles and data-driven consulting.</p>
+            <div class="d-flex justify-content-center gap-4 my-4">
+                <a href="https://linkedin.com/in/shahriar-kabir-223494163" class="text-light fs-4"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/shahriarKabir44" class="text-light fs-4"><i class="fab fa-github"></i></a>
+                <a href="mailto:shourovk6@gmail.com" class="text-light fs-4"><i class="fas fa-envelope"></i></a>
+            </div>
+            <hr class="border-secondary my-4">
+            <p class="text-muted small">© 2024 Md. Shahriar Kabir | Khulna University</p>
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
