@@ -1,0 +1,60 @@
+        :root {
+            --bg-dark: #0f172a;
+            --card-bg: #1e293b;
+            --accent: #38bdf8;
+            --text-main: #e2e8f0;
+            --text-muted: #94a3b8;
+            --excel-green: #107c41;
+        }
+
+        body { 
+            background-color: var(--bg-dark); 
+            color: var(--text-main); 
+            font-family: 'Inter', sans-serif; 
+            scroll-behavior: smooth; 
+        }
+
+        .accent-color { color: var(--accent); }
+        .navbar { background-color: rgba(15, 23, 42, 0.95); border-bottom: 1px solid #334155; }
+        
+        /* Cards & Sections */
+        .card { background-color: var(--card-bg); border: 1px solid #334155; color: var(--text-main); transition: 0.3s; }
+        .card:hover { transform: translateY(-5px); border-color: var(--accent); }
+        section { padding: 80px 0; }
+
+        /* Experience Timeline */
+        .experience-item { border-left: 2px solid var(--accent); padding-left: 25px; margin-bottom: 40px; position: relative; }
+        .experience-item::before { content: ""; position: absolute; width: 14px; height: 14px; background: var(--accent); left: -8px; top: 5px; border-radius: 50%; box-shadow: 0 0 10px var(--accent); }
+
+        /* Excel Expertise Box */
+        .excel-pro-box { 
+            background: linear-gradient(135deg, #107c41 0%, #064e3b 100%); 
+            border-radius: 12px; 
+            padding: 30px; 
+            border: 1px solid #22c55e;
+        }
+.skill-group h5 { border-bottom: 2px solid var(--accent); display: inline-block; padding-bottom: 5px; margin-bottom: 15px; }
+        .badge-skill { background: rgba(56, 189, 248, 0.1); color: var(--accent); border: 1px solid var(--accent); padding: 6px 14px; border-radius: 50px; display: inline-block; margin: 4px; font-size: 0.85rem; font-weight: 500; }
+        .badge-tech { 
+            background-color: rgba(56, 189, 248, 0.1); 
+            color: var(--accent); 
+            border: 1px solid var(--accent); 
+            padding: 4px 10px; 
+            border-radius: 6px; 
+            font-size: 0.8rem; 
+            margin-right: 5px;
+            margin-bottom: 5px;
+            display: inline-block;
+        }
+.btn-github { background-color: #333; color: white; border: none; }
+        .btn-github:hover { background-color: #444; color: white; }
+        .article-card { border-top: 4px solid var(--accent); }
+        .view-more-box {
+            background: linear-gradient(90deg, rgba(0, 163, 224, 0.1) 0%, rgba(3, 10, 28, 1) 100%);
+            border: 1px dashed var(--accent);
+            color: white !important ;
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+        }
+        footer { background-color: #020617; padding: 50px 0; border-top: 1px solid #1e293b; }
